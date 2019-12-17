@@ -1,0 +1,55 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+//头部
+#header{
+    width: 100%;
+    height: 100px;
+}
+.header-inner{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    .c-logo{
+        width: 125px;
+        height: 100px;
+        float: left;
+        a{
+            background-image: url(http://member-ssl.vipstatic.com/img/passport/sprites-hash-37a2448b.png?3377aaf5);
+            background-position: -308px -57px;
+            width: 125px;
+            height: 100px;
+            display: inline-block;
+        }
+    }
+    .c-service{
+        width: 304px;
+        height: 100px;
+        float: right;
+        background: url(http://member-ssl.vipstatic.com/img/passport/sprites-hash-37a2448b.png?3377aaf5) no-repeat 0 0;
+    }
+}
+//登录注册
+@import "c-login";
+//尾部
+#footer{
+    width: 100%;
+    height: 78px;
+    p{
+        width: 1000px;
+        height: 78px;
+        margin: 0 auto;
+        color: #666;
+        text-align: center;
+        line-height: 78px;
+    }
+}
