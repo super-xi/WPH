@@ -21,15 +21,19 @@
                         <span></span>
                     </div>
                     <div class="tab-top-nav">
-                        <p>请选择收货地址</p>
+                        <div class="choose">
+                            请选择所在的收货地区
+                            <div class="close" href="javzscript">x</div>
+                        </div>
                         <div class="tab-title-top">
-                            <button>省份</button>
-                            <button>城市</button>
+                            <div class="btn">省份</div>
+                            <div class="btn checked">城市</div>
+                            <div class="empty"></div>
                         </div>
                         <div class="tab-items-top">
-                            <div class="tab-item show">
+                            <div class="tab-item">
                                 <ul>
-                                    <li><a href="javascript:;">北京市</a></li>
+                                    <li class="active"><a href="javascript:;">北京市</a></li>
                                     <li><a href="javascript:;">天津市</a></li>
                                     <li><a href="javascript:;">河北省</a></li>
                                     <li><a href="javascript:;">山西省</a></li>
@@ -59,12 +63,12 @@
                                     <li><a href="javascript:;">甘肃省</a></li>
                                     <li><a href="javascript:;">青海省</a></li>
                                     <li><a href="javascript:;">宁夏回族自治区</a></li>
-                                    <li><a href="javascript:;">新疆</a></li>
+                                    <li><a href="javascript:;">新疆维吾尔自治区</a></li>
                                 </ul>
                             </div>
-                            <div class="tab-item">
+                            <div class="tab-item show">
                                 <ul>
-                                    <li><a href="javascript:;">杭州市</a></li>
+                                    <li class="active"><a href="javascript:;">杭州市</a></li class="active">
                                     <li><a href="javascript:;">宁波市</a></li>
                                     <li><a href="javascript:;">温州市</a></li>
                                     <li><a href="javascript:;">嘉兴市</a></li>
@@ -497,7 +501,7 @@
             </ul>
         </div>
     </section>
-    <!-- 每日上新的物品 -->
+    <!-- 每日精选品牌 -->
     <article id="today">
         <div class="today-title">
             <img src="http://a.vpimg4.com/upload/dop/2019/05/23/58/today_DDp.png" alt="">
@@ -512,7 +516,7 @@
                 </div>
             </div>
             <div class="today-goods">
-                <div class="today-goods-detail">
+                <!-- <div class="today-goods-detail">
                     <img src="http://c.vpimg1.com/upcb/2019/12/13/117/ias_157622367348605_570x273_90.jpg" alt="">
                     <div class="brand-info">
                         <span class="brand-name">恩裳女装专场</span>
@@ -589,7 +593,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </article>
@@ -603,7 +607,7 @@
         </div>
         <div class="wdress-shop">
             <div class="wdress-goods">
-                <div class="wdress-goods-detail">
+                <!-- <div class="wdress-goods-detail">
                     <img src="http://c.vpimg1.com/upcb/2019/12/06/65/ias_dabda274-98cf-45f6-921c-4cf1e7acf2d0_570x273_90.jpg"
                         alt="">
                     <div class="brand-info">
@@ -673,7 +677,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="wdress-more">
                 <a class="wdress-more-button" href="javascript:;">逛更多女装品牌</a>
@@ -689,7 +693,7 @@
         </div>
         <div class="shoebag-shop">
             <div class="shoebag-goods">
-                <div class="shoebag-goods-detail">
+                <!-- <div class="shoebag-goods-detail">
                     <img src="http://d.vpimg1.com/upcb/2019/12/11/25/ias_157604390357612_570x273_90.jpg" alt="">
                     <div class="brand-info">
                         <span class="brand-name">年终底价-沙驰satchi男女鞋包专场</span>
@@ -733,7 +737,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="shoebag-more">
                 <a class="shoebag-more-button" href="javascript:;">逛更多鞋包品牌</a>
@@ -931,6 +935,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./script/index.js" type="module" async="true"></script>
 </body>
 
 </html>

@@ -1,0 +1,153 @@
+#detail{
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.main-detail{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding-top: 22px;
+}
+.pic{
+    width: 420px;
+    height: 490px;
+    float: left;
+}
+.sp{
+    width: 420px;
+    height: 420px;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .sf{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        opacity: .4;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.s-pics{
+    width: 420px;
+    height: 64px;
+    margin-top: 5px;
+    li{
+        width: 62px;
+        height: 62px;
+        border: 1px solid #f2f2f2;
+        float: left;
+        margin-right: 7px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.infor{
+    width: 500px;
+    height: 490px;
+    float: right;
+}
+.infor-title{
+    width: 100%;
+    height: 78px;
+    margin-top: 20px;
+    a{
+        display: block;
+        color: #007cff;
+        width: 340px;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 22px;
+        height: 22px;
+    }
+    p{
+        line-height: 20px;
+        margin-top: 8px;
+        margin: 10px 0;
+        font-weight: 700;
+    }
+}
+.infor-price{
+    width: 100%;
+    height: 80px;
+    background: #f9f9f9;
+    margin: 15px 0;
+    .c-price{
+        font-size: 48px;
+        margin-left: 20px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .c-dicount{
+        font-size: 16px;
+        color: #999;
+        margin-left: 20px;
+    }
+}
+.infor-num{
+    font-size: 12px;
+    color: #999;
+    overflow: hidden;
+    margin: 30px 0;
+}
+.num-txt{
+    width: 40px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    float: left;
+}
+.num-box{
+    float: left;
+    width: 75px;
+    height: 30px;
+    border: 1px solid #b3b3b3;
+    a{
+        background-color: #f9f8f8;
+        color: #dad8d8;
+        width: 21px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .num-lbtn{
+        float: left;
+    }
+    .num-rbtn{
+        float: right;
+    }
+    .c-num{
+        width: 30px;
+        text-align: center;
+        float: left;
+        height: 28px;
+        line-height: 28px;
+        color: #999;
+        font-size: 14px;
+    }
+}
+.sub-btn-box{
+    width: 100%;
+    margin: 20px 0;
+    .sub-btn{
+        width: 198px;
+        height: 46px;
+        background-color: #f10180;
+        border: 1px solid #f10180;
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+    }
+}
+.infor-money{
+    width: 100%;
+    height: 20px;
+}

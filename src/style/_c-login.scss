@@ -12,16 +12,19 @@
     }
 }
 .c-login{
-    width: 300px;
+    width: 360px;
     border-radius: 10px;
     float: right;
     padding: 20px 10px;
 }
 fieldset{
-    width: 280px;
+    width: 300px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #fff;
+    h3{
+        margin: 20px auto;
+    }
     p{
         height: 35px;
         margin-bottom: 10px;
