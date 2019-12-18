@@ -36,6 +36,10 @@ li {
   float: left;
   font-size: 12px;
 }
+#position-top-nav .position-city {
+  text-align: center;
+  height: 30px;
+}
 #position-top-nav span {
   position: absolute;
   top: 10px;
@@ -58,7 +62,7 @@ li {
   width: 400px;
   background-color: #fff;
   border: 1px solid #ccc;
-  z-index: 10;
+  z-index: 5;
   display: none;
 }
 .tab-top-nav .choose {
@@ -109,26 +113,27 @@ li {
   display: block;
 }
 .tab-top-nav .tab-title-top li, .tab-top-nav .tab-items-top li {
-  width: 70px;
+  width: 60px;
+  margin: 5px 15px;
   height: 27px;
   line-height: 27px;
   float: left;
-  margin-bottom: 2px;
   text-align: center;
 }
 .tab-top-nav .tab-title-top li a, .tab-top-nav .tab-items-top li a {
   color: #333;
-  width: 46px;
+  width: 100%;
+  height: 100%;
   display: inline-block;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
 
 .tab-top-nav .tab-items-top .active {
   background: #f10180;
-}
-.tab-top-nav .tab-items-top .active a {
   color: #fff;
 }
 
@@ -147,6 +152,9 @@ li {
   padding-right: 15px;
   cursor: pointer;
   position: relative;
+}
+#top-nav-tool li:hover {
+  color: #f10180;
 }
 #top-nav-tool li a {
   color: #777;
@@ -291,8 +299,9 @@ li {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   background-color: #fff;
+  outline: none;
 }
-.c-search-box a {
+.c-search-box .fdj {
   position: absolute;
   top: 0;
   right: 0;
@@ -310,6 +319,63 @@ li {
   width: 19px;
   height: 22px;
   display: inline-block;
+}
+
+.search-infor {
+  display: none;
+  width: 389px;
+  height: 280px;
+  padding: 20px 15px 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.search-infor .search-hist {
+  float: left;
+  width: 145px;
+  height: 100%;
+  font-size: 13px;
+  border-right: 1px solid #ddd;
+}
+.search-infor .search-hist p {
+  color: #999;
+  margin-bottom: 10px;
+}
+.search-infor .search-hist .search-hist-list {
+  margin: 10px 0;
+}
+.search-infor .search-reco {
+  float: left;
+  height: 100%;
+  width: 145px;
+  padding-left: 15px;
+  font-size: 13px;
+}
+.search-infor .search-reco p {
+  color: #999;
+  margin-bottom: 10px;
+}
+.search-infor .search-reco .search-reco-list {
+  margin: 5px 0;
+  float: left;
+  margin-right: 10px;
+}
+.search-infor .search-reco .search-reco-list a {
+  display: inline-block;
+  color: #333;
+  padding-right: 5px;
+  padding-left: 5px;
+  line-height: 24px;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  font-size: 12px;
 }
 
 .c-search-content {
@@ -331,12 +397,15 @@ li {
   vertical-align: top;
   color: #999;
 }
+.c-search-content .c-search-list li .a-first {
+  color: #f10180;
+}
 .c-search-content .c-search-list li span {
   margin: 0 6px;
   color: #ccc;
 }
 
-/***********澶撮儴瀵艰埅*************/
+/***********澶撮儴浜岀骇瀵艰埅*************/
 #header-mainnav {
   height: 43px;
   width: 100%;
@@ -357,12 +426,12 @@ li {
   float: left;
   cursor: pointer;
 }
-.main-nav li a {
+.main-nav li .mainnav-title {
   display: inline-block;
   font-size: 16px;
   color: #333;
 }
-.main-nav li a .ico-menu {
+.main-nav li .mainnav-title .ico-menu {
   vertical-align: middle;
   margin-top: -3px;
   margin-right: 6px;
@@ -372,9 +441,13 @@ li {
   text-align: center;
   padding: 0;
   background-color: #f10180;
+  position: relative;
 }
 .main-nav .main-nav-menu a {
   color: #fff;
+}
+.main-nav .main-nav-menu:hover .menu-nav2-list {
+  display: block;
 }
 .main-nav .main-nav-home a {
   cursor: default;
@@ -383,30 +456,36 @@ li {
 }
 
 .menu-nav2 {
-  display: none;
   position: absolute;
   top: 43px;
   left: 0;
 }
 .menu-nav2 .menu-nav2-list {
+  display: none;
   width: 156px;
-  height: 477px;
+  height: 468px;
   overflow: hidden;
-  background-color: #f10180;
   transition: .2s linear;
   box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 .menu-nav2 .menu-nav2-list li {
+  background-color: #f10180;
   color: #fff;
   width: 100%;
   height: 43px;
   line-height: 43px;
-  padding-left: 35px;
+}
+.menu-nav2 .menu-nav2-list li:hover {
+  background: #fff;
+  color: #f10180;
 }
 
 .main-nav-more {
   width: 65px;
   position: relative;
+}
+.main-nav-more:hover .nav-more-list {
+  display: block;
 }
 .main-nav-more .nav-more-list {
   display: none;
@@ -422,16 +501,18 @@ li {
 .main-nav-more .nav-more-list li {
   width: 100%;
   height: 43px;
+  text-align: center;
 }
 .main-nav-more .nav-more-list li a {
   color: #000;
 }
 
 .menu-nav2-cate {
+  display: none;
   position: absolute;
   left: 156px;
   top: 0;
-  height: 475px;
+  height: 468px;
   width: 854px;
   background-color: #fff;
   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
@@ -455,7 +536,7 @@ li {
   line-height: 22px;
   position: absolute;
   left: 0;
-  width: 83px;
+  width: 50px;
   height: 43px;
   color: #222;
 }
@@ -463,6 +544,8 @@ li {
   width: 100%;
   height: 100%;
   margin-left: 75px;
+  text-align: left;
+  line-height: 22px;
 }
 .nav2-cate-detail .cate-detail-items dd a {
   color: #666;
@@ -472,7 +555,7 @@ li {
 .nav2-cate-brand {
   background-color: #f5f5f5;
   width: 170px;
-  height: 456px;
+  height: 448px;
   padding: 10px;
   float: right;
 }
@@ -486,8 +569,11 @@ li {
   float: left;
   width: 30px;
   height: 60px;
-  background: pink;
   margin-top: 10px;
+}
+.nav2-cate-brand .nav2-cate-brandinner li img {
+  width: 100%;
+  height: 100%;
 }
 
 #detail {

@@ -20,6 +20,10 @@
     border-color: #f5f5f5;
     float: left;
     font-size: 12px;
+    .position-city{
+        text-align: center;
+        height: 30px;
+    }
     span{
         position: absolute;
         top: 10px;
@@ -42,7 +46,7 @@
     width: 400px;
     background-color: #fff;
     border: 1px solid #ccc;
-    z-index: 10;
+    z-index: 5;
     display: none;
     .choose{
         width:100%;
@@ -95,27 +99,28 @@
         }
     }
     .tab-title-top li,.tab-items-top li{
-        width: 70px;
+        width: 60px;
+        margin: 5px 15px;
         height: 27px;
         line-height: 27px;
         float: left;
-        margin-bottom: 2px;
         text-align: center;
         a{
             color: #333;
-            width: 46px;
+            width: 100%;
+            height: 100%;
             display: inline-block;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+            border: 1px solid #fff;
+            box-sizing: border-box;
         }
     }
 }
 .tab-top-nav .tab-items-top .active{
     background: #f10180;
-    a{
-        color: #fff;
-    }
+    color: #fff;
 }
 
 #top-nav-tool{
@@ -132,6 +137,9 @@
         padding-right: 15px;
         cursor: pointer;
         position: relative;
+        &:hover{
+            color: #f10180;
+        }
         a{
             color: #777;
         }
@@ -272,8 +280,9 @@
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
         background-color: #fff;
+        outline: none;
     }
-    a{
+    .fdj{
         position: absolute;
         top: 0;
         right: 0;
@@ -293,6 +302,62 @@
         display: inline-block;
     }
 }
+.search-infor{
+    display: none;
+    width: 389px;
+    height: 280px;
+    padding: 20px 15px 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    .search-hist{
+        float: left;
+        width: 145px;
+        height: 100%;
+        font-size: 13px;
+        border-right: 1px solid #ddd;
+        p{
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .search-hist-list{
+            margin: 10px 0;
+        }
+    }
+    .search-reco{
+        float: left;
+        height: 100%;
+        width: 145px;
+        padding-left: 15px;
+        font-size: 13px;
+        p{
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .search-reco-list{
+            margin: 5px 0;
+            float: left;
+            margin-right: 10px;
+            a{
+                display: inline-block;
+                color: #333;
+                padding-right: 5px;
+                padding-left: 5px;
+                line-height: 24px;
+                border: 1px solid #e1e1e1;
+                border-radius: 2px;
+                font-size: 12px;
+            }
+        }
+    }
+}
 .c-search-content{
     margin: 0;
     padding: 0;
@@ -309,6 +374,9 @@
                 vertical-align: top;
                 color: #999;
             }
+            .a-first{
+                color: #f10180;
+            }
             span{
                 margin:0 6px;
                 color: #ccc;
@@ -316,7 +384,7 @@
         }
     }
 }
-/***********头部导航*************/ 
+/***********头部二级导航*************/ 
 #header-mainnav{
     height: 43px;
     width: 100%;
@@ -334,7 +402,7 @@
         line-height: 43px;
         float: left;
         cursor: pointer;
-        a{
+        .mainnav-title{
             display: inline-block;
             font-size: 16px;
             color: #333;
@@ -350,8 +418,12 @@
         text-align: center;
         padding: 0;
         background-color: #f10180;
+        position: relative;
         a{
             color: #fff;
+        }
+        &:hover .menu-nav2-list{
+            display: block;
         }
     }
     .main-nav-home{
@@ -363,29 +435,35 @@
     }
 }
 .menu-nav2{
-    display: none;
     position: absolute;
     top: 43px;
     left: 0;
     .menu-nav2-list{
+        display: none;
         width: 156px;
-        height: 477px;
+        height: 468px;
         overflow: hidden;
-        background-color: #f10180;
         transition: .2s linear;
         box-shadow: -2px 2px 3px rgba(0,0,0,.1);
         li{
+            background-color: #f10180;
             color: #fff;
             width: 100%;
             height: 43px;
             line-height: 43px;
-            padding-left: 35px;
+            &:hover{
+                background: #fff;
+                color: #f10180;
+            }
         }
     }
 }
 .main-nav-more{
     width: 65px;
     position: relative;
+    &:hover .nav-more-list{
+        display: block;
+    }
     .nav-more-list{
         display: none;
         width: 65px;
@@ -399,6 +477,7 @@
         li{
             width: 100%;
             height: 43px;
+            text-align: center;
             
             a{
                color: #000;
@@ -407,10 +486,11 @@
     }
 }
 .menu-nav2-cate{
+    display: none;
     position: absolute;
     left: 156px;
     top: 0;
-    height: 475px;
+    height: 468px;
     width: 854px;
     background-color: #fff;
     box-shadow: 2px 2px 3px 0 rgba(0,0,0,.1);
@@ -431,7 +511,7 @@
             line-height: 22px;
             position: absolute;
             left: 0;
-            width: 83px;
+            width: 50px;
             height: 43px;
             color: #222;
         }
@@ -439,6 +519,8 @@
             width: 100%;
             height: 100%;
             margin-left: 75px;
+            text-align: left;
+            line-height: 22px;
             a{
                 color: #666;
                 margin-right: 10px;
@@ -449,7 +531,7 @@
 .nav2-cate-brand{
     background-color: #f5f5f5;
     width: 170px;
-    height: 456px;
+    height: 448px;
     padding: 10px;
     float: right;
     .nav2-cate-brandtitle{
@@ -463,8 +545,11 @@
             float: left;
             width: 30px;
             height: 60px;
-            background: pink;
             margin-top: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
