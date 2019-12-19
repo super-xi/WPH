@@ -1,55 +1,59 @@
 import { ajax, jstool, $, siblings, bufferMove, double } from "./tool.js";
 class Toolbar{
     constructor(){
+        //获取工具栏
+        this.toolbox=$("#toolbar");
+        //获取li
+        this.toolList=document.querySelectorAll("#toolbar .c-list");
+        console.log(this.toolList);
+        //获取账号
+        this.userTool=$("#toolbar .user-infor-box");
+        //获取隐藏盒子
+        this.hideBox=document.querySelectorAll("#toolbar .c-list .hidebox");
+        //获取回到顶部
+        this.backTop=$("#toolbar .backtop");
     }
     init(){
-        //创建toolbar盒子
-        this.cDiv();
+        //改变工具栏的高度-->可视区的高
+        //可视区的高-->document.documentElement.clientHeight
+        this.toolbox.style.height=document.documentElement.clientHeight+'px';
+        this.size();
+        this.newStyle();
+        this.back();
     }
-    cDiv(){
-        let height=document.documentElement.clientHeight;
-        //创建toolbar盒子
-        const toolBox=document.createElement("div");
-        //盒子的样式
-        toolBox.style.cssText=`
-            width:36px;
-            height:${height}px;
-            background:pink;
-            position:fixed;
-            right:0;
-            top:0;
-        `
-        //添加到body
-        document.body.appendChild(toolBox);
-        console.log(toolBox);
-        let htmlstr='';
-        htmlstr+=`
-            <ul>
-                <li><li>
-                <li><li>
-            </ul>
-            <ul>
-                <li></li>
-                <li></li>
-            <ul>
-        `;
-        toolBox.innerHTML+=htmlstr;
-        toolBox.children[0].style.cssText=`
-            width:36px;
-            height:390px;
-            position:absolute;
-            top:30%;
-            left:0;
-            background:skyblue;
-        `
-        toolBox.children[1].style.cssText=`
-            width:36px;
-            height:88px;
-            position:absolute;
-            bottom:0;
-            left:0;
-            background:skyblue;
-        `
+    //浏览器窗口触发事件-->window.onsize()
+    size(){
+        let _this=this;
+        window.onresize=function(){
+            _this.toolbox.style.height=document.documentElement.clientHeight+'px';
+        }
+    }
+    //鼠标经过li改变样式
+    newStyle(){
+        let _this=this;
+        for(let i=0;i<this.toolList.length;i++){
+            //鼠标移入改变背景颜色
+            this.toolList[i].onmouseenter=function(){
+                //清除被改变的背景颜色
+                for(let j=0;j<_this.toolList.length;j++){
+                    _this.toolList[j].style.background="";
+                }
+                _this.toolList[i].style.background="#df147f";
+                bufferMove(_this.hideBox[i],{"right":30});
+
+            }
+            //鼠标移出清除背景颜色
+            this.toolList[i].onmouseleave=function(){
+                _this.toolList[i].style.background="";
+                bufferMove(_this.hideBox[i],{"right":-200});
+            }
+        }
+    }
+    //回到顶部
+    back(){
+        this.backTop.onclick=function(){
+            document.documentElement.scrollTop=0;
+        }
     }
 }
 export{Toolbar}

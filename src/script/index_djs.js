@@ -29,7 +29,7 @@ class Djs {
     }
     djsHour(){
         //设置未来时间/获取当前时间
-        const furtime = new Date('2019.12.25 00:00:00');
+        const furtime = new Date('2019.12.20 00:00:00');
         let nowtime = new Date();
         //未来时间-当前时间
         let time = parseInt((furtime - nowtime) / 1000);
@@ -38,7 +38,7 @@ class Djs {
     }
     djsMins(){
         //设置未来时间/获取当前时间
-        const furtime = new Date('2019.12.19 00:00:00');
+        const furtime = new Date('2019.12.20 00:00:00');
         let nowtime = new Date();
         //未来时间-当前时间
         let time = parseInt((furtime - nowtime) / 1000);
@@ -47,7 +47,7 @@ class Djs {
     }
     djsSecs(){
         //设置未来时间/获取当前时间
-        const furtime = new Date('2019.12.19 00:00:00');
+        const furtime = new Date('2019.12.20 00:00:00');
         let nowtime = new Date();
         //未来时间-当前时间
         let time = parseInt((furtime - nowtime) / 1000);

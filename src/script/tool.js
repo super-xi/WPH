@@ -135,7 +135,16 @@ function siblings(elm) {
 }
 
 //缓冲运动
+//bufferMove(_this.box,{left:0})
 function bufferMove(obj, json, fn) {
+    var speed = 0;
+    function getStyle(obj, attr) {
+        if (window.getComputedStyle) {
+            return window.getComputedStyle(obj)[attr];
+        } else {
+            return obj.currentStyle[attr];
+        }
+    }
     clearInterval(obj.timer); //防止事件下面定时器叠加
     obj.timer = setInterval(function () {
         var flag = true; //假设运动已经结束
@@ -150,7 +159,7 @@ function bufferMove(obj, json, fn) {
                 currentValue = parseInt(getStyle(obj, attr));
             }
             //2.求速度
-            speed = (json[attr] - currentValue) / 10; //10：运动因子
+            speed = (json[attr] - currentValue) / 5; //10：运动因子
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
             //3.判断运动开启和停止
             if (currentValue !== json[attr]) { //没到目标继续运动
@@ -167,10 +176,9 @@ function bufferMove(obj, json, fn) {
             clearInterval(obj.timer);
             fn && typeof fn === 'function' && fn(); //运动完成，执行回调函数。
         }
-
-
-    }, 1000 / 60);
+    }, 10);
 }
+
 
 //保证结果是两位数
 function double(n){
