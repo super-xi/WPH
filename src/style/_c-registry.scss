@@ -26,6 +26,9 @@
     .c-registry-switch{
         float: right;
         font-size: 14px;
+        .login-in{
+            color: #f10180;
+        }
     }
     h3{
         font-size: 18px;
@@ -43,8 +46,9 @@
             height: 46px;
             border: 1px solid #d2c2d2;
             border-radius: 3px;
-            margin-bottom: 20px;  
-            .tel,.password,.n-password{
+            margin-bottom: 30px;  
+            outline: none;
+            .user,.tel,.password,.n-password{
                 margin-left: 40px;
                 width: 230px;
                 height: 32px;
@@ -54,50 +58,45 @@
                 color: #ccc;        
             }
         }
-        .num{
-            width: 145px;
-            height: 46px;
-            border: 1px solid #d2c2d2;
-            border-radius: 3px;
-            margin-bottom: 20px;
-            display: inline-block;
-            input{
-                width: 125px;
-                height: 34px;
-                margin: 5px 7px;
-                border: 0;
-                text-align: center;
-                color: #ccc; 
+        .password-strong{
+            width: 100%;
+            height: 12px;
+            margin-top: 15px;
+            .strong-box{
+                float: left;
+                width: 40px;
+                margin-top: 3px;
+                height: 10px;
+                background: #eee;
+                .ruo{
+                    width: 33%;
+                    height: 100%;
+                    float: left;
+                    background: pink;
+                }
+                .zhong{
+                    width: 33%;
+                    height: 100%;
+                    float: left;
+                    background: orange;
+                }
+                .qiang{
+                    width: 33%;
+                    height: 100%;
+                    float: left;
+                    background: green;
+                }
             }
-            .btn{
-                background: #fcedf2;
-                color: #e00078;
-                outline: 0;
+            .strong-txt{
+                float: left;
+                margin-left: 5px;
+                font-size: 12px;
             }
         }
         .buttonnum{
             background-color: #fcedf2;
             border: 1px solid #ffbee0;
         }
-    }
-}
-.agree{
-    width: 300px;
-    height: 36px;
-    margin-bottom: 30px;
-    .agree-yes{
-        display: inline-block;
-        background-image: url(http://bootstrap.vipstatic.com/img/ui/sprite.png?d9eadd17);
-        background-position: -48px 0;
-        width: 19px;
-        height: 16px;
-    }
-    .agree-txt{
-        vertical-align: middle;
-        font-size: 12px;
-        display: inline-block;
-        width: 276px;
-        line-height: 1.5;
     }
 }
 .finish{
